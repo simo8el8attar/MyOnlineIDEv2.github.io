@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inconsolata:wght@200..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Madimi+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+  <header id="header" class="container-fluid py-3">
+    <nav class="d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <div class="dropdown me-3">
+          <button onclick="showThemes()" class="btn" type="button" id="themeButton" aria-expanded="false" style="font-size: 2rem; color: #0e80e3;">
+            <i class="bi bi-palette"></i>
+          </button>
+          <ul id="ulThemes" class="dropdown-menu p-2" aria-labelledby="themeButton">
+            <li>
+              <select onchange="changeTheme()" id="themes" class="form-select form-select-sm mb-1">
+                <option value="normal">normal</option>
+                <option value="light">light</option>
+                <option value="dark">dark</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+        <h1 id="tt" class="mb-0"><i class="bi bi-code-slash" style="font-size: 2.5rem; color: #fff;"></i> My Online IDE</h1>
+      </div>
+      <div class="d-flex align-items-center">
+        <button onclick="showHtml()" type="button" class="btn btn-light me-2">HTML</button>
+        <button onclick="showCss()" type="button" class="btn btn-light me-2">CSS</button>
+        <button id="btnJS" onclick="showJs()" type="button" class="btn btn-light me-2">JAVASCRIPT</button>
+        <button id="btnRun" onclick="runCode()" type="button" class="btn btn-light">Run Code</button>
+      </div>
+    </nav>
+  </header>
+  <div id="section" class="container-fluid d-flex flex-column flex-lg-row p-3">
+    <div class="flex-fill p-2">
+      <h2 id="htmlTitle">HTML:</h2>
+      <textarea class="form-control" id="htmlIDE" rows="18"></textarea>
+    </div>
+    <div class="flex-fill p-2">
+      <h2 id="cssTitle">CSS:</h2>
+      <textarea class="form-control" id="cssIDE" rows="18"></textarea>
+    </div>
+    <div class="flex-fill p-2">
+      <h2 id="jsTitle">JAVASCRIPT:</h2>
+      <textarea class="form-control" id="jsIDE" rows="18"></textarea>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="jquery.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
